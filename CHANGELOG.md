@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.1 (2026-07-17)
+
+### Bug Fixes
+
+- Marketplace description adjusts (1)
+  ([`cb7bab9`](https://github.com/btech-software/especialista-contabilidade/commit/cb7bab9e85835a9cb9c9dd243949d91b1710a268))
+
+
 ## v1.1.0 (2026-07-17)
 
 ### Features
