@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "especialista-contabilidade"
-version = "0.1.0"
+version = "1.0.0"
 description = "Aumente a capacidade de seu assistente com habilidades de um especialista em contabilidade."
 readme = "README.md"
 authors = [{ name = "Especialista Contabilidade Team", email = "contabilidade@btech.software" }]
