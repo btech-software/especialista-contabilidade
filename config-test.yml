@@ -1,0 +1,12 @@
+api_base_url: "http://localhost"
+auth:
+  enabled: false
+broker:
+  url: "redis://localhost:16379/0"
+db:
+  url: "postgresql://postgres:postgres@localhost:15432/especialista_ia_contabilidade"
+  vectors: "postgresql://postgres:postgres@localhost:15432/especialista_ia_contabilidade_vectors"
+  checkpoints: "postgresql://postgres:postgres@localhost:15432/especialista_ia_contabilidade_checkpoints"
+vault:
+  url: "http://localhost:18200"
+  token: "dev-only-token"
