@@ -1,0 +1,9 @@
+{
+  "name": "especialista-contabilidade",
+  "version": "1.0.0",
+  "description": "Fluxo estruturado de análise profissional em contabilidade e consultoria financeira para o mercado brasileiro, com workflow guiado de 7 fases",
+  "author": {
+    "name": "btech-software",
+    "email": "contato@btech.software"
+  }
+}

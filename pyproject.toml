@@ -33,6 +33,9 @@ build_command = "uv lock && git add uv.lock"
 version_variables = [
     "docker/app/Dockerfile:SERVICE_VERSION",
     "pyproject.toml:version",
+    ".claude-plugin/marketplace.json:version",
+    "plugins/especialista-contabilidade/.claude-plugin/plugin.json:version",
+    "plugins/especialista-contabilidade/README.md:Versão",
 ]
 
 [tool.ruff.lint]
