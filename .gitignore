@@ -12,6 +12,7 @@ coverage.xml
 
 # Environment
 .env
+.idea/
 
 # Project artifacts
 *.db
