@@ -28,6 +28,13 @@ test = [
     "testcontainers[vault]~=4.14.2",
 ]
 
+[tool.semantic_release]
+build_command = "uv lock && git add uv.lock"
+version_variables = [
+    "docker/app/Dockerfile:SERVICE_VERSION",
+    "pyproject.toml:version",
+]
+
 [tool.ruff.lint]
 select = ["E", "F", "W"]
 ignore = ["E203", "E501"]
