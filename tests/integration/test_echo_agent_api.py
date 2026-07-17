@@ -3,7 +3,7 @@ from uuid import uuid4
 import pytest
 from fastapi.testclient import TestClient
 
-from especialista_ia_contabilidade.main import app
+from especialista_contabilidade.main import app
 
 # Every route carries an HTTPBearer dependency even with auth disabled, so
 # any bearer value satisfies it.
@@ -38,7 +38,7 @@ def create_agent(client) -> dict:
         headers=AUTH_HEADERS,
         json={
             "language_model_id": language_model["id"],
-            "agent_type": "especialista_ia_contabilidade_echo",
+            "agent_type": "especialista_contabilidade_echo",
             "agent_name": f"agent-{uuid4()}",
         },
     ).json()

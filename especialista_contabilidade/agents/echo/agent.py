@@ -6,7 +6,7 @@ from agent_lab.interface.api.messages.schema import Message, MessageRequest
 from agent_lab.services.tasks import TaskProgress
 
 
-@discoverable_agent("especialista_ia_contabilidade_echo")
+@discoverable_agent("especialista_contabilidade_echo")
 class EchoAgent(AgentBase):
     """Minimal agent: echoes the incoming message without calling an LLM."""
 

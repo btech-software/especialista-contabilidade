@@ -1,4 +1,4 @@
-# Especialista IA Contabilidade
+# Especialista Contabilidade
 
 Aumente a capacidade de seu assistente com habilidades de um especialista em contabilidade.
 
@@ -18,7 +18,7 @@ make test_unit     # no-container smoke tests: app boots, examples registered
 Run locally (needs Postgres, Redis, and Vault reachable per `config-dev.yml`):
 
 ```bash
-DEVELOPING=1 uv run uvicorn especialista_ia_contabilidade.main:app --reload
+DEVELOPING=1 uv run uvicorn especialista_contabilidade.main:app --reload
 ```
 
 Or run the full stack in containers:
@@ -31,16 +31,16 @@ curl http://localhost:18000/status/liveness
 
 ## Project layout
 
-- `especialista_ia_contabilidade/main.py` — the composition root: `create_app()` scans only this
+- `especialista_contabilidade/main.py` — the composition root: `create_app()` scans only this
   project's packages, so none of Agent-Lab's built-in agents/tools are exposed.
   Add `"agent_lab.services.agent_types"` / `"agent_lab.interface.mcp"` to
   `scan_packages` to opt back in.
-- `especialista_ia_contabilidade/core/container.py` — add your own dependency-injection providers
+- `especialista_contabilidade/core/container.py` — add your own dependency-injection providers
   here; reference them from agents via `extra_deps`.
-- `especialista_ia_contabilidade/agents/` — one example echo agent (`@discoverable_agent`) and a
+- `especialista_contabilidade/agents/` — one example echo agent (`@discoverable_agent`) and a
   single-node ReAct workflow agent whose checkpointed state stores a
   chain-of-thought per turn.
-- `especialista_ia_contabilidade/mcp/` — one example MCP tool and prompt, exposed at `/mcp`.
+- `especialista_contabilidade/mcp/` — one example MCP tool and prompt, exposed at `/mcp`.
 
 
 ## Prompt templates

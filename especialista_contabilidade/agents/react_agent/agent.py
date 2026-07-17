@@ -17,7 +17,7 @@ class ReactAgentState(MessagesState):
     generation: str
 
 
-@discoverable_agent("especialista_ia_contabilidade_react")
+@discoverable_agent("especialista_contabilidade_react")
 class ReactAgent(WorkflowAgentBase):
     """Single-node ReAct workflow.
 

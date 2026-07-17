@@ -10,7 +10,7 @@ from fastapi.testclient import TestClient
 from agent_lab.interface.mcp import prompt_registration, tool_registration
 from agent_lab.services.agent_types import registration
 
-from especialista_ia_contabilidade.main import app
+from especialista_contabilidade.main import app
 
 client = TestClient(app)
 
@@ -21,7 +21,7 @@ def test_app_boots_and_status_route_present():
 
 
 def test_example_agents_are_registered():
-    assert registration.is_registered("especialista_ia_contabilidade_echo")
+    assert registration.is_registered("especialista_contabilidade_echo")
 
 
 def test_agent_types_endpoint_resolves_dependency_injection():
@@ -29,14 +29,14 @@ def test_agent_types_endpoint_resolves_dependency_injection():
     # framework endpoint modules are not wired to this project's Container.
     response = client.get("/agents/types", headers={"Authorization": "Bearer dummy"})
     assert response.status_code == 200
-    assert "especialista_ia_contabilidade_echo" in response.json()
+    assert "especialista_contabilidade_echo" in response.json()
 
 
 def test_example_mcp_tool_is_registered():
     tool_names = {tool.name for tool in tool_registration.registered_tools()}
-    assert "especialista_ia_contabilidade_hello_tool" in tool_names
+    assert "especialista_contabilidade_hello_tool" in tool_names
 
 
 def test_example_mcp_prompt_is_registered():
     prompt_names = {prompt.name for prompt in prompt_registration.registered_prompts()}
-    assert "especialista_ia_contabilidade_greeting_prompt" in prompt_names
+    assert "especialista_contabilidade_greeting_prompt" in prompt_names

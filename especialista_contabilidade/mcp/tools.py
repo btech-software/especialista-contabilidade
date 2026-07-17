@@ -2,9 +2,9 @@ from agent_lab import discoverable_mcp_tool
 
 
 @discoverable_mcp_tool(
-    "especialista_ia_contabilidade_hello_tool",
+    "especialista_contabilidade_hello_tool",
     description="Returns a friendly greeting. Replace with your own MCP tools.",
     annotations={"readOnlyHint": True},
 )
 async def hello_tool(container, name: str) -> str:
-    return f"Hello, {name}! This is Especialista IA Contabilidade."
+    return f"Hello, {name}! This is Especialista Contabilidade."

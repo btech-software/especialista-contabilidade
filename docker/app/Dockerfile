@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 
-ENV SERVICE_NAME="Especialista IA Contabilidade"
+ENV SERVICE_NAME="Especialista Contabilidade"
 ENV SERVICE_VERSION=0.1.0
 ENV PYTHONUNBUFFERED=1
 ENV HOST=0.0.0.0
@@ -19,7 +19,7 @@ RUN --mount=from=ghcr.io/astral-sh/uv:latest,source=/uv,target=/bin/uv \
     && chown -R app:app /app
 
 USER app
-COPY especialista_ia_contabilidade /app/especialista_ia_contabilidade/
+COPY especialista_contabilidade /app/especialista_contabilidade/
 COPY config-docker.yml /app/
 
-CMD ["/bin/bash", "-c", "/app/.venv/bin/python -m uvicorn especialista_ia_contabilidade.main:app --host ${HOST} --port ${PORT} --workers ${WORKERS}"]
+CMD ["/bin/bash", "-c", "/app/.venv/bin/python -m uvicorn especialista_contabilidade.main:app --host ${HOST} --port ${PORT} --workers ${WORKERS}"]

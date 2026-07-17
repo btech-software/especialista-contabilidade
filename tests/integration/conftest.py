@@ -40,9 +40,9 @@ vault = (
 def setup_postgres():
     psql = "PGPASSWORD='postgres' psql --username postgres --host 127.0.0.1"
     for database in (
-        "especialista_ia_contabilidade",
-        "especialista_ia_contabilidade_checkpoints",
-        "especialista_ia_contabilidade_vectors",
+        "especialista_contabilidade",
+        "especialista_contabilidade_checkpoints",
+        "especialista_contabilidade_vectors",
     ):
         postgres.exec(["sh", "-c", f"{psql} -c 'create database {database};'"])
 

@@ -2,8 +2,8 @@ from agent_lab import discoverable_mcp_prompt
 
 
 @discoverable_mcp_prompt(
-    "especialista_ia_contabilidade_greeting_prompt",
+    "especialista_contabilidade_greeting_prompt",
     description="A sample system prompt. Replace with your own MCP prompts.",
 )
 def greeting_prompt(role: str = "assistant") -> str:
-    return f"You are a helpful {role} for Especialista IA Contabilidade."
+    return f"You are a helpful {role} for Especialista Contabilidade."

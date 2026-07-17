@@ -1,6 +1,6 @@
 from agent_lab import create_app
 
-from especialista_ia_contabilidade.core.container import Container
+from especialista_contabilidade.core.container import Container
 
 # An explicit scan_packages list replaces agent_lab's DEFAULT_SCAN_PACKAGES:
 # only this project's agents, MCP tools, and prompts are discovered — none of
@@ -9,7 +9,7 @@ from especialista_ia_contabilidade.core.container import Container
 app = create_app(
     container=Container(),
     scan_packages=[
-        "especialista_ia_contabilidade.agents",
-        "especialista_ia_contabilidade.mcp",
+        "especialista_contabilidade.agents",
+        "especialista_contabilidade.mcp",
     ],
 )

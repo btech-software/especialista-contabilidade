@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: docker/app/Dockerfile
     networks:
-      - especialista-ia-contabilidade
+      - especialista-contabilidade
     ports:
       - "18000:8000"
     environment:
@@ -20,7 +20,7 @@ services:
   postgres:
     image: pgvector/pgvector:pg16
     networks:
-      - especialista-ia-contabilidade
+      - especialista-contabilidade
     ports:
       - "5432:5432"
     environment:
@@ -35,14 +35,14 @@ services:
   postgres-setup:
     image: pgvector/pgvector:pg16
     networks:
-      - especialista-ia-contabilidade
+      - especialista-contabilidade
     environment:
       PGPASSWORD: postgres
     command: >
       bash -c '
-        echo "CREATE DATABASE especialista_ia_contabilidade;" | psql -h postgres -U postgres
-        echo "CREATE DATABASE especialista_ia_contabilidade_checkpoints;" | psql -h postgres -U postgres
-        echo "CREATE DATABASE especialista_ia_contabilidade_vectors;" | psql -h postgres -U postgres
+        echo "CREATE DATABASE especialista_contabilidade;" | psql -h postgres -U postgres
+        echo "CREATE DATABASE especialista_contabilidade_checkpoints;" | psql -h postgres -U postgres
+        echo "CREATE DATABASE especialista_contabilidade_vectors;" | psql -h postgres -U postgres
       '
     depends_on:
       postgres:
@@ -51,7 +51,7 @@ services:
   redis:
     image: redis:alpine
     networks:
-      - especialista-ia-contabilidade
+      - especialista-contabilidade
     ports:
       - "6379:6379"
     healthcheck:
@@ -63,7 +63,7 @@ services:
   vault:
     image: hashicorp/vault:1.18
     networks:
-      - especialista-ia-contabilidade
+      - especialista-contabilidade
     ports:
       - "8200:8200"
     environment:
@@ -74,5 +74,5 @@ services:
     entrypoint: vault server -dev
 
 networks:
-  especialista-ia-contabilidade:
-    name: especialista-ia-contabilidade
+  especialista-contabilidade:
+    name: especialista-contabilidade
