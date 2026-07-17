@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Marketplace Btech Software",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
@@ -14,7 +14,7 @@
       "name": "especialista-contabilidade",
       "source": "./plugins/especialista-contabilidade",
       "description": "Aumente a capacidade de seu assistente com habilidades de um especialista em contabilidade.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "finance",
       "tags": ["contabilidade", "negocios", "accounting", "business"],
       "keywords": ["contabilidade", "analise financeira", "analise contabil", "controladoria", "accounting", "controller"]
