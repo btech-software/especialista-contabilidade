@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.3 (2026-07-23)
+
+### Bug Fixes
+
+- Version bump release
+  ([`acee668`](https://github.com/btech-software/especialista-contabilidade/commit/acee66875eab43f7bed36ec33f1f4f0d26f98607))
+
+
 ## v1.1.2 (2026-07-17)
 
 ### Bug Fixes
