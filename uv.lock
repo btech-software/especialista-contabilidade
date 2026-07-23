@@ -553,7 +553,7 @@ wheels = [
 
 [[package]]
 name = "btech-agent-lab"
-version = "1.12.0"
+version = "1.15.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "browser-use" },
@@ -607,9 +607,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "uvicorn" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6c/b3/a3804f470e6a672b2ea3faa7079ce7c6db1fdca5221ec71276fd0f51f55e/btech_agent_lab-1.12.0.tar.gz", hash = "sha256:eb0673fb67efc6e5953fc7690f911e1e63b3d07d81e3cdda2423aa0a6751353e", size = 85597, upload-time = "2026-07-17T13:46:01.034Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6a/b0/217e08f45bde412c997241f8430b1e955e4a5a919241823d3b4a479e6587/btech_agent_lab-1.15.0.tar.gz", hash = "sha256:b15263c6c7fba72bb22ee353053e6e31a53698dcd5ebd433748d7ea2194ad9fe", size = 91497, upload-time = "2026-07-20T16:17:53.712Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/59/68/3775040e1571de75405869de1f12e63da7cd7c647234a4c25788d51a5a0f/btech_agent_lab-1.12.0-py3-none-any.whl", hash = "sha256:32a11e2718fee9c942e152f1696d9bf41686e228fba2b47b16e6a42f1c459713", size = 130867, upload-time = "2026-07-17T13:45:59.656Z" },
+    { url = "https://files.pythonhosted.org/packages/e5/bc/ef81e052b987667e10057b0f734ce14c315679af7e210609a0db0565bc2b/btech_agent_lab-1.15.0-py3-none-any.whl", hash = "sha256:13bf99c9803fe291aa5f7fa5abe184f16eb45bc18b24c7df0158d30322aabcc6", size = 131200, upload-time = "2026-07-20T16:17:52.235Z" },
 ]
 
 [[package]]
@@ -1172,7 +1172,7 @@ test = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "btech-agent-lab", specifier = ">=1.12.0,<2.0.0" }]
+requires-dist = [{ name = "btech-agent-lab", specifier = ">=1.15.0,<2.0.0" }]
 
 [package.metadata.requires-dev]
 dev = [
@@ -3929,7 +3929,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess" },
+    { name = "ptyprocess", marker = "sys_platform != 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450, upload-time = "2023-11-25T09:07:26.339Z" }
 wheels = [
@@ -8316,8 +8316,8 @@ name = "secretstorage"
 version = "3.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography" },
-    { name = "jeepney" },
+    { name = "cryptography", marker = "sys_platform != 'win32'" },
+    { name = "jeepney", marker = "sys_platform != 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1c/03/e834bcd866f2f8a49a85eaff47340affa3bfa391ee9912a952a1faa68c7b/secretstorage-3.5.0.tar.gz", hash = "sha256:f04b8e4689cbce351744d5537bf6b1329c6fc68f91fa666f60a380edddcd11be", size = 19884, upload-time = "2025-11-23T19:02:53.191Z" }
 wheels = [
@@ -8486,8 +8486,8 @@ name = "standard-aifc"
 version = "3.13.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "audioop-lts" },
-    { name = "standard-chunk" },
+    { name = "audioop-lts", marker = "python_full_version >= '3.13'" },
+    { name = "standard-chunk", marker = "python_full_version >= '3.13'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c4/53/6050dc3dde1671eb3db592c13b55a8005e5040131f7509cef0215212cb84/standard_aifc-3.13.0.tar.gz", hash = "sha256:64e249c7cb4b3daf2fdba4e95721f811bde8bdfc43ad9f936589b7bb2fae2e43", size = 15240, upload-time = "2024-10-30T16:01:31.772Z" }
 wheels = [
