@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.2.1 (2026-07-24)
+
+### Bug Fixes
+
+- Update setup-node action version format in Docker workflow
+  ([`46e96ad`](https://github.com/btech-software/especialista-contabilidade/commit/46e96ad603bc5dc324a81e81b70993a56d40c10e))
+
+
 ## v1.2.0 (2026-07-24)
 
 ### Features
