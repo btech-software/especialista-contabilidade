@@ -10,3 +10,7 @@ db:
 vault:
   url: "http://vault:8200"
   token: "dev-only-token"
+static:
+  enabled: true
+  directory: "especialista_contabilidade/static/frontend/browser"
+  index_file: "index.html"
