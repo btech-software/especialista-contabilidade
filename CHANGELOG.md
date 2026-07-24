@@ -2,6 +2,35 @@
 
 <!-- version list -->
 
+## v1.2.0 (2026-07-24)
+
+### Features
+
+- Add .vscode to .gitignore for IDE configuration files
+  ([`0dfa7d4`](https://github.com/btech-software/especialista-contabilidade/commit/0dfa7d4497adaee70c45f0dd0b333277a6cdd986))
+
+- Adjusts docker image build action (build frontend)
+  ([`adb53d1`](https://github.com/btech-software/especialista-contabilidade/commit/adb53d16284a87bf9c78efd0bfefd040ba0b1c41))
+
+- Frontend bootstrap with angular cli
+  ([`b8fb9fa`](https://github.com/btech-software/especialista-contabilidade/commit/b8fb9fa977010bd0cdf3bed4d63c37c598332317))
+
+- Remove project key and organization from sonar configuration
+  ([`30a687e`](https://github.com/btech-software/especialista-contabilidade/commit/30a687e89aa570f4ce37cf331b42d5e6833ece27))
+
+- Sonar code scanner for frontend
+  ([`d435b9f`](https://github.com/btech-software/especialista-contabilidade/commit/d435b9f200bbb79440b5c4a6fb7ab49fcea14f01))
+
+- Update frontend build configuration and add static files
+  ([`7536b1f`](https://github.com/btech-software/especialista-contabilidade/commit/7536b1fed37716431b8c9058b8c4d9ed746dcce9))
+
+- Update Node.js version to 22 in CI workflows
+  ([`1b8509a`](https://github.com/btech-software/especialista-contabilidade/commit/1b8509ae2b80d0cff8c9b08a4c1708912d96a522))
+
+- Update sonar project key and organization in configuration
+  ([`4e928ad`](https://github.com/btech-software/especialista-contabilidade/commit/4e928ad9245a4114464c32d97203de7670147cbc))
+
+
 ## v1.1.3 (2026-07-23)
 
 ### Bug Fixes
