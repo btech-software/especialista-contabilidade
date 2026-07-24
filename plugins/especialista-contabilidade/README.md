@@ -75,4 +75,4 @@ btech-software (contato@btech.software)
 
 ## Versão
 
-Versão: 1.2.1
+Versão: 1.2.2

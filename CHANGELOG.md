@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.2.2 (2026-07-24)
+
+### Bug Fixes
+
+- Static web pages release (2)
+  ([`2d507c7`](https://github.com/btech-software/especialista-contabilidade/commit/2d507c7a332405fb5c5d4035faff4d8d38db88f4))
+
+
 ## v1.2.1 (2026-07-24)
 
 ### Bug Fixes
