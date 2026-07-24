@@ -12,7 +12,7 @@ license-files = ["LICENSE"]
 authors = [{ name = "Especialista Contabilidade Team", email = "contabilidade@btech.software" }]
 requires-python = ">=3.12"
 dependencies = [
-    "btech-agent-lab>=1.15.0,<2.0.0",
+    "btech-agent-lab>=1.16.0,<2.0.0",
 ]
 
 [tool.hatch.build.targets.wheel]
