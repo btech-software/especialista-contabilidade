@@ -1,3 +1,173 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+/* Design tokens from DESIGN.md — "Vibrant Professionalism" */
+@theme {
+  --font-display: 'Ubuntu', 'Trebuchet MS', 'Helvetica Neue', sans-serif;
+  --font-sans: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+
+  --color-surface: #f9f9f9;
+  --color-surface-dim: #dadada;
+  --color-surface-bright: #f9f9f9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #3c4946;
+  --color-inverse-surface: #2f3131;
+  --color-inverse-on-surface: #f1f1f1;
+  --color-outline: #6c7a76;
+  --color-outline-variant: #bbcac5;
+  --color-primary: #006b5e;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #31bba8;
+  --color-on-primary-container: #00453d;
+  --color-primary-strong: #005047;
+  --color-inverse-primary: #5adbc6;
+  --color-secondary: #566500;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d5ef5c;
+  --color-on-secondary-container: #5b6b00;
+  --color-tertiary: #5d5e60;
+  --color-on-tertiary: #ffffff;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+}
+
+/* Typography scale from DESIGN.md */
+@utility text-display-lg {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+}
+
+@utility text-headline-lg {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+@utility text-headline-lg-mobile {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+@utility text-headline-md {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+@utility text-body-lg {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+@utility text-body-md {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@utility text-label-md {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/*
+ * Signature diagonal gradient: teal (bottom-left, from 1%) to lime,
+ * fully saturated at 80% so the final 20% is a solid lime field.
+ * Decorative use only — white text does not meet WCAG AA on the lime end.
+ */
+@utility bg-signature-gradient {
+  background-image: linear-gradient(
+    to top right,
+    var(--color-primary) 1%,
+    var(--color-secondary-container) 80%
+  );
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+  }
+
+  [id] {
+    /* Keep anchored sections clear of the sticky header */
+    scroll-margin-top: 5.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-strong);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-primary);
+    background-color: transparent;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: calc(0.75rem - 2px) calc(1.5rem - 2px);
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  }
+}
