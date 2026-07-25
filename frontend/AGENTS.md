@@ -1,6 +1,12 @@
 
 You are an expert in TypeScript, Angular, and scalable web application development. You write functional, maintainable, performant, and accessible code following Angular and TypeScript best practices.
 
+## Design System
+Always read and strictly follow `DESIGN.md` before generating or modifying any UI, components, styles, or layout.
+- Use only the tokens and component patterns defined there.
+- Prefer the prose rationale over generic defaults.
+- If a requested change conflicts with DESIGN.md, call it out and propose an update to DESIGN.md first.
+
 ## TypeScript Best Practices
 
 - Use strict type checking
