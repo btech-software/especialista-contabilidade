@@ -50,7 +50,7 @@ import { RouterLink } from '@angular/router';
 export class LandingHeader {
   protected readonly links = [
     { route: '/funcionamento', label: 'Como funciona' },
-    { href: '#demonstracao', label: 'Demonstração' },
+    { route: '/empresas', label: 'Para Empresas' },
     { href: '#planos', label: 'Planos' },
     { route: '/contabilistas', label: 'Para escritórios' },
     { href: '#quem-somos', label: 'Quem somos' },
