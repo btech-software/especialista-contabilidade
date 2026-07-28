@@ -22,6 +22,11 @@ export const routes: Routes = [
     loadComponent: () => import('./features/accountants/accountants-page').then((m) => m.AccountantsPage)
   },
   {
+    path: 'planos',
+    title: 'Planos - Especialista em Contabilidade',
+    loadComponent: () => import('./features/pricing/pricing-page').then((m) => m.PricingPage)
+  },
+  {
     path: 'empresas',
     title: 'Para Empresas - Especialista em Contabilidade',
     loadComponent: () => import('./features/business/business-page').then((m) => m.BusinessPage)

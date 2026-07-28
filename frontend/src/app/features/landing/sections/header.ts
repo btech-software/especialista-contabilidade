@@ -51,8 +51,8 @@ export class LandingHeader {
   protected readonly links = [
     { route: '/funcionamento', label: 'Como funciona' },
     { route: '/empresas', label: 'Para Empresas' },
-    { href: '#planos', label: 'Planos' },
     { route: '/contabilistas', label: 'Para escritórios' },
+    { route: '/planos', label: 'Planos' },
     { href: '#quem-somos', label: 'Quem somos' },
   ];
 }
