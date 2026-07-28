@@ -24,14 +24,21 @@ import { RouterLink } from '@angular/router';
           />
         </a>
         <ul class="hidden items-center gap-6 lg:flex">
-          @for (link of links; track link.href) {
+          @for (link of links; track link.label) {
             <li>
-              <a
-                [href]="link.href"
-                class="text-body-md text-on-surface-variant transition-colors hover:text-primary"
-              >
-                {{ link.label }}
-              </a>
+              @if (link.route) {
+                <a
+                  [routerLink]="link.route"
+                  class="text-body-md text-on-surface-variant transition-colors hover:text-primary"
+                  >{{ link.label }}</a
+                >
+              } @else {
+                <a
+                  [href]="link.href"
+                  class="text-body-md text-on-surface-variant transition-colors hover:text-primary"
+                  >{{ link.label }}</a
+                >
+              }
             </li>
           }
         </ul>
@@ -42,10 +49,10 @@ import { RouterLink } from '@angular/router';
 })
 export class LandingHeader {
   protected readonly links = [
-    { href: '#como-funciona', label: 'Como funciona' },
+    { route: '/funcionamento', label: 'Como funciona' },
     { href: '#demonstracao', label: 'Demonstração' },
     { href: '#planos', label: 'Planos' },
-    { href: '#para-escritorios', label: 'Para escritórios' },
+    { route: '/contabilistas', label: 'Para escritórios' },
     { href: '#quem-somos', label: 'Quem somos' },
   ];
 }

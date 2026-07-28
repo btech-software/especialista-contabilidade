@@ -16,5 +16,10 @@ export const routes: Routes = [
     title: 'Funcionamento - Especialista em Contabilidade',
     loadComponent: () => import('./features/howto/howto-page').then((m) => m.HowtoPage)
   },
+  {
+    path: 'contabilistas',
+    title: 'Para Escritórios - Especialista em Contabilidade',
+    loadComponent: () => import('./features/accountants/accountants-page').then((m) => m.AccountantsPage)
+  },
   { path: '**', redirectTo: '' }
 ];
