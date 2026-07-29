@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landing-footer',
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, RouterLink],
   template: `
     <footer class="bg-surface-container py-12">
       <div
@@ -23,20 +24,29 @@ import { NgOptimizedImage } from '@angular/common';
         </div>
         <nav aria-label="Links do rodapé">
           <ul class="flex flex-wrap gap-x-6 gap-y-2">
-            @for (link of links; track link.href) {
+            @for (link of links; track link.label) {
               <li>
-                <a
-                  [href]="link.href"
-                  class="text-body-md text-on-surface-variant transition-colors hover:text-primary"
-                >
-                  {{ link.label }}
-                </a>
+                @if (link.route) {
+                  <a
+                    [routerLink]="link.route"
+                    class="text-body-md text-on-surface-variant transition-colors hover:text-primary"
+                    >{{ link.label }}</a
+                  >
+                } @else {
+                  <a
+                    [href]="link.href"
+                    class="text-body-md text-on-surface-variant transition-colors hover:text-primary"
+                    >{{ link.label }}</a
+                  >
+                }
               </li>
             }
           </ul>
         </nav>
       </div>
-      <div class="mx-auto mt-8 max-w-6xl border-t border-surface-container-highest px-4 pt-6 md:px-16">
+      <div
+        class="mx-auto mt-8 max-w-6xl border-t border-surface-container-highest px-4 pt-6 md:px-16"
+      >
         <p class="text-body-md text-on-surface-variant">
           © {{ currentYear }} Especialista em Contabilidade. Feito no Brasil.
         </p>
@@ -52,6 +62,6 @@ export class LandingFooter {
     { href: '#demonstracao', label: 'Demonstração' },
     { href: '#planos', label: 'Planos' },
     { href: '#para-escritorios', label: 'Para escritórios' },
-    { href: '#quem-somos', label: 'Quem somos' },
+    { route: '/quem-somos', label: 'Quem somos' },
   ];
 }

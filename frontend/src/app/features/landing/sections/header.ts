@@ -13,7 +13,11 @@ import { RouterLink } from '@angular/router';
         class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-16"
         aria-label="Navegação principal"
       >
-        <a routerLink="/" class="flex shrink-0 items-center" aria-label="Especialista em Contabilidade — início">
+        <a
+          routerLink="/"
+          class="flex shrink-0 items-center"
+          aria-label="Especialista em Contabilidade — início"
+        >
           <img
             ngSrc="logo_positive.png"
             width="96"
@@ -26,19 +30,11 @@ import { RouterLink } from '@angular/router';
         <ul class="hidden items-center gap-6 lg:flex">
           @for (link of links; track link.label) {
             <li>
-              @if (link.route) {
-                <a
-                  [routerLink]="link.route"
-                  class="text-body-md text-on-surface-variant transition-colors hover:text-primary"
-                  >{{ link.label }}</a
-                >
-              } @else {
-                <a
-                  [href]="link.href"
-                  class="text-body-md text-on-surface-variant transition-colors hover:text-primary"
-                  >{{ link.label }}</a
-                >
-              }
+              <a
+                [routerLink]="link.route"
+                class="text-body-md text-on-surface-variant transition-colors hover:text-primary"
+                >{{ link.label }}</a
+              >
             </li>
           }
         </ul>
@@ -53,6 +49,6 @@ export class LandingHeader {
     { route: '/empresas', label: 'Para Empresas' },
     { route: '/contabilistas', label: 'Para escritórios' },
     { route: '/planos', label: 'Planos' },
-    { href: '#quem-somos', label: 'Quem somos' },
+    { route: '/quem-somos', label: 'Quem somos' },
   ];
 }

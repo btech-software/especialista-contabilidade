@@ -6,7 +6,6 @@ import { LandingHowItWorks } from './sections/how-it-works';
 import { LandingDemoChat } from './sections/demo-chat';
 import { LandingBenefits } from './sections/benefits';
 import { LandingForAccountants } from './sections/for-accountants';
-import { LandingAbout } from './sections/about';
 import { LandingFinalCta } from './sections/final-cta';
 import { LandingFooter } from './sections/footer';
 
@@ -20,7 +19,6 @@ import { LandingFooter } from './sections/footer';
     LandingDemoChat,
     LandingBenefits,
     LandingForAccountants,
-    LandingAbout,
     LandingFinalCta,
     LandingFooter,
   ],
@@ -33,7 +31,6 @@ import { LandingFooter } from './sections/footer';
       <app-landing-demo-chat />
       <app-landing-benefits />
       <app-landing-for-accountants />
-      <app-landing-about />
       <app-landing-final-cta />
     </main>
     <app-landing-footer />

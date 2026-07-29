@@ -14,7 +14,7 @@ describe('LandingPage', () => {
     const fixture = TestBed.createComponent(LandingPage);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    for (const id of ['como-funciona', 'demonstracao', 'para-escritorios', 'quem-somos']) {
+    for (const id of ['como-funciona', 'demonstracao', 'para-escritorios']) {
       expect(compiled.querySelector(`#${id}`)).toBeTruthy();
     }
   });
