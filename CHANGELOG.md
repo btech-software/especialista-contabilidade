@@ -2,6 +2,50 @@
 
 <!-- version list -->
 
+## v1.3.0 (2026-07-29)
+
+### Features
+
+- Add 'Para Empresas' page and update header links
+  ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+- Add 'Para Escritórios' page and update routing in landing header
+  ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+- Add 'Planos' page and update header links
+  ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+- Add 'Quem Somos' page and update routing in landing header
+  ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+- Add landing page components and routing for 'Funcionamento'
+  ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+- Design System and logo ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+- Landing page prototype (2)
+  ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+- Landing page with proposed structure rev (1)
+  ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+- Update favicon.ico with new design
+  ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+- Update logo assets by removing negative logo and modifying positive logo
+  ([#9](https://github.com/btech-software/especialista-contabilidade/pull/9),
+  [`1950350`](https://github.com/btech-software/especialista-contabilidade/commit/195035090dcd6ae5830dfab76d5dba61929d0f0b))
+
+
 ## v1.2.2 (2026-07-24)
 
 ### Bug Fixes
